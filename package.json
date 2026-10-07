@@ -1,0 +1,21 @@
+{
+  "name": "@nanoempire/slack-mcp",
+  "version": "1.0.0",
+  "description": "Sandboxed Slack workspace MCP server with channel-level isolation, webhook verification, and autonomous x402 pay-per-call rails.",
+  "main": "server.py",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "@monetize",
+    "x402",
+    "solana",
+    "slack"
+  ],
+  "author": "Rob Lambert",
+  "license": "MIT",
+  "homepage": "https://www.nanoempireai.com/mcp/slack-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roblambert9/slack-mcp.git"
+  }
+}

@@ -1,0 +1,13 @@
+# Smithery configuration for Slack MCP Secure (Monetized)
+name: "slack-mcp"
+version: "1.0.0"
+description: "Sandboxed Slack workspace MCP server with channel-level isolation, webhook verification, and autonomous x402 pay-per-call rails."
+startCommand:
+  type: "stdio"
+  command: "python"
+  args: ["server.py"]
+tags:
+  - mcp
+  - monetization
+  - x402
+  - slack

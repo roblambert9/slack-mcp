@@ -1,0 +1,16 @@
+{
+  "name": "slack-mcp",
+  "displayName": "Slack MCP Secure (Monetized)",
+  "description": "Sandboxed Slack workspace MCP server with channel-level isolation, webhook verification, and autonomous x402 pay-per-call rails.",
+  "repository": "https://github.com/roblambert9/slack-mcp",
+  "command": "python",
+  "args": [
+    "server.py"
+  ],
+  "tags": [
+    "mcp",
+    "monetization",
+    "x402",
+    "slack"
+  ]
+}

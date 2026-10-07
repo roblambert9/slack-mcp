@@ -1,0 +1,18 @@
+schema_version: "1.0"
+id: "slack-mcp"
+name: "Slack MCP Secure (Monetized)"
+description: "Sandboxed Slack workspace MCP server with channel-level isolation, webhook verification, and autonomous x402 pay-per-call rails."
+author: "Rob Lambert (@roblambert9)"
+repository: "https://github.com/roblambert9/slack-mcp"
+pricing:
+  model: "pay_per_call"
+  price_usdc: 0.01
+  free_tier_calls: 50
+  currency: "USDC"
+  settlement_network: "Solana"
+registry_targets:
+  - AgentOps
+  - LangChain
+runtime:
+  command: "python"
+  args: ["server.py"]

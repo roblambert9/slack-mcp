@@ -1,0 +1,37 @@
+{
+  "attestation_id": "SP-F494F7E15E5E",
+  "target": "slack-mcp",
+  "timestamp": "2026-10-07T19:55:11.042951+00:00",
+  "overall_score": 88,
+  "grade": "A (Production Certified \u2014 Low Risk)",
+  "vector_scores": {
+    "V1_SCHEMA_SANITIZATION": 100,
+    "V2_PATH_CONTAINMENT": 100,
+    "V3_COMMAND_INJECTION": 100,
+    "V4_NETWORK_SSRF": 70,
+    "V5_PROMPT_INJECTION_FRAMING": 60,
+    "V6_SECRET_LEAKAGE_REDACTION": 100
+  },
+  "findings_count": 3,
+  "findings": [
+    {
+      "vector": "V4_NETWORK_SSRF",
+      "severity": "MEDIUM",
+      "description": "Outbound HTTP requests present without private IP / loopback / cloud metadata SSRF guard."
+    },
+    {
+      "vector": "V5_PROMPT_INJECTION_FRAMING",
+      "severity": "LOW",
+      "description": "Returned tool payloads are returned raw without structured untrusted content tags."
+    },
+    {
+      "vector": "Environment Variable / Agent Configuration",
+      "severity": "CRITICAL",
+      "description": "Critical Tollbooth Bypass via TRIAL_MODE Environment Variable: The 'slack_post_message' tool's monetization mechanism can be completely bypassed by setting the 'TRIAL_MODE' environment variable to 'true'. Furthermore, the default behavior of `os.getenv(\"TRIAL_MODE\", \"true\")` means that if the 'TRIAL_MODE' variable is not explicitly set, the system defaults to trial mode, effectively allowing free usage by default. This renders the entire 'pay-per-call' model non-functional and allows agents to invoke the monetized function indefinitely without incurring any cost."
+    }
+  ],
+  "audit_authority": "Nano Empire SkillProof Engine v2.4",
+  "directory_placement_url": "https://buy.stripe.com/eVq00keeo5n1bCzgIwfAc0c",
+  "verified_status": "CERTIFIED",
+  "cryptographic_hash": "ed13a899c7684046e19f4137cf5a8d46472264aa70b34b566f6a090b095ad773"
+}
